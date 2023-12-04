@@ -7,10 +7,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: 'Testing Github action'
-        run: pwd
-
-      - name: 'printing folder contents'
-        run: ls
+    steps:    
+      - uses: actions/checkout@v3 
+      - name: "Login to Docker hub"
+      - run: docker login --username salma548 --password dckr_pat_NyBDCNMeasMwSzaFQd6p3zJddP8 
 
